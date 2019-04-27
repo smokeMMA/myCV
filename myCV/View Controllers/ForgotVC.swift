@@ -19,5 +19,17 @@ class ForgotVC: UIViewController {
         navigationController?.isNavigationBarHidden = true
         showForgotThingLabel.text = showText
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! LoginVC
+        if showText.hasSuffix("Mikhail") {
+        destination.userNameTextField.text = destination.userName
+            destination.userNameTextField.textColor = .black
+        }
+        if showText.hasSuffix("12345") {
+            destination.passwordTextField.text = destination.userPassword
+            destination.passwordTextField.textColor = .black
+        }
+    }
 }
 

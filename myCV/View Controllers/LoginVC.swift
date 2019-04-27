@@ -44,10 +44,6 @@ extension LoginVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.isNavigationBarHidden = false
-        
-        //Autologin
-        //        userNameTextField.text = userName
-        //        passwordTextField.text = userPassword
     }
     
     //set red colors to textfields if wrong input
@@ -69,9 +65,7 @@ extension LoginVC {
     
     //MARK: NAVIGATION
     
-    @IBAction func unwind(segue: UIStoryboardSegue) {
-        print(#line, #function, segue.identifier ?? "no identifier" )
-    }
+    @IBAction func unwind(segue: UIStoryboardSegue) {}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
