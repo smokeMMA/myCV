@@ -121,7 +121,6 @@ extension LoginVC: UITextFieldDelegate  {
         return true
     }
     
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         checkTextFieldsWithSegue(sender: textField)
         textField.resignFirstResponder()
